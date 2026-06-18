@@ -15,3 +15,7 @@
 
 # Add a feed source
 # echo 'src-git passwall2 https://github.com/Openwrt-Passwall/openwrt-passwall2.git' >>feeds.conf.default
+
+
+# 添加 daed 源码
+git clone https://github.com/QiuSimons/luci-app-daed package/dae
