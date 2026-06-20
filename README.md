@@ -1,6 +1,6 @@
 # 适用于小米ax3000t的云编译openwrt固件及刷入教程和刷回官方教程
 
-## 注意：[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)里的固件可能仅适用于ax3000t v1版本路由器，v2版刷[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)里的固件或我所提供的uboot可能会变砖！
+## 注意：[Releases](https://github.com/damoo007/Xiaomi-ax3000t-daed-openwrt/releases)里的固件可能仅适用于ax3000t v1版本路由器，v2版刷[Releases](https://github.com/damoo007/Xiaomi-ax3000t-daed-openwrt/releases)里的固件或我所提供的uboot可能会变砖！
 
 **可以通过修改.config文件及diy-part1.sh文件自定义编译固件**
 
@@ -10,13 +10,13 @@
 
 **看README的时候请不要使用浏览器的网页翻译，会导致README的排版错误。**
 
-**如果您使用的是发布在[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)里的固件，且使用机型和我的机型一致那么应该是不会出现刷不上去和无法正常使用等奇奇怪怪的问题的**
+**如果您使用的是发布在[Releases](https://github.com/damoo007/Xiaomi-ax3000t-daed-openwrt/releases)里的固件，且使用机型和我的机型一致那么应该是不会出现刷不上去和无法正常使用等奇奇怪怪的问题的**
 
 **关于使用uboot刷入openwrt的说明：7月8日及之前版本的固件刷入时uboot选择第三项qwrt，8月4日及以后版本的固件刷入时uboot选择第二项，7月8日及以前的版本的固件升级8月4日及以后版本的固件时请先在`备份/升级`选项中备份配置文件，然后再到uboot里去升级，选择第二个选项，升级后再到`备份/升级`里恢复之前的配置文件。**
 
 ## 修改说明
 
-### 仓库里适用与小米ax3000t的config文件及[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)里的固件相对lede默认ax3000t的配置而言修改的部分
+### 仓库里适用与小米ax3000t的config文件及[Releases](https://github.com/damoo007/Xiaomi-ax3000t-daed-openwrt/releases)里的固件相对lede默认ax3000t的配置而言修改的部分
 
 1.添加ipv6支持
 
@@ -28,9 +28,9 @@
 
 5.删去了默认的Ddns，添加了[Ddns-go](https://github.com/sirpdboy/luci-app-ddns-go)（2024/8/4版本及以后有）
 
-6.2025/08/12及之后版本没有ssrplus,使用passwall2
+6.使用了daed,取消了passwall2.
 
-7.2025/08/12之前(不包括)版本使用ssrplus,没有passwall2
+
 
 ### 工作流文件修改（相较于原仓库）
 
@@ -50,7 +50,7 @@
 
 ## 使用方法一（如果设备是小米ax3000t）
 
-直接到[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)中下载已经编译好的固件，刷squashfs-sysupgrade格式的就可以，不行就先刷initramfs-kernel然后再到后台去升级为squashfs-sysupgrade格式的固件。
+直接到[Releases](https://github.com/damoo007/Xiaomi-ax3000t-daed-openwrt/releases)中下载已经编译好的固件，刷squashfs-sysupgrade格式的就可以，不行就先刷initramfs-kernel然后再到后台去升级为squashfs-sysupgrade格式的固件。
 
 ## 使用方法二（不修改config文件的话编译的是ax3000t的固件）
 
@@ -132,6 +132,6 @@
 # [刷回小米官方固件](https://github.com/zc360/Xiaomi-ax3000t-openwrt/blob/main/BackXiaomi.md)
 
 # 感谢[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)和[haiibo](https://github.com/haiibo/OpenWrt)以及[dzikaros](https://github.com/dzikaros/ActionsBuildOpenWRT)的源码提供支持
-
+# 感谢[zc360] (https://github.com/zc360/Xiaomi-ax3000t-openwrt)
 
 
