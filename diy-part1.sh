@@ -18,4 +18,4 @@
 
 
 # 添加 daed 源码
-git clone https://github.com/QiuSimons/luci-app-daed package/dae
+git clone https://github.com/kenzok8/openwrt-daede package/dae
